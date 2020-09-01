@@ -50,19 +50,33 @@ function calculaMedia(vet){
 }
 function calculaMaiorIdade(vet){
     console.log(`Entrou na função calcular maior idade`)
-    let maioridade = -1
-    for(let i =0;i<vet.length;i++){
+    let maioridade = vet[0].idade
+    for(let i =1;i<vet.length;i++){
         if((vet[i].idade > maioridade)){
             maioridade = vet[i].idade
         }
     } 
-
+    console.log(`Maior idade = ${maioridade}`)
 }
 function CalculaQtde(vet){
-    console.log(`Entrou na função calcular quantidade`) 
-
+    console.log(`Entrou na função calcular quantidade`)
+    let qtde = 0 
+    for(let i =0;i<vet.length;i++){
+        if(((vet[i].sexo == "F") && (vet[i].idade >= 20) && (vet[i].idade <= 45))
+        ||
+        ((vet[i].olhos == "A") && (vet[i].altura < 1.70))){
+            qtde++
+        }
+    }
+    console.log(`A quantidade é de ${qtde}`)
 }
 function CalculaPercentual(vet){
     console.log(`Entrou na função calcular pencentual`) 
-
+    let conta = 0
+    for(let i =0;i<vet.length;i++){
+        if(vet[i].sexo == "M"){
+            conta++
+        }
+    }
+    console.log(`Percentual de homens é de ${(conta/vet.length)*100}%`)
 }
