@@ -3,8 +3,8 @@ function chefe(){
     //vetor de escopo global
     let vendendores = []
     let vendas = []
+    let opcao = Number(prompt(`Escolha : \n [1].Cadastrar vendedor \n [2].Cadastrar venda \n [3].Sair`))
     do{
-        let opcao = Number(prompt(`Escolha : \n [1].Cadastrar vendedor \n [2].Cadastrar venda \n [3].Sair`))
         switch(opcao){
             case 1: cadastraVendedores(vendendores)
                     break
