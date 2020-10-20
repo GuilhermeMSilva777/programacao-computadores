@@ -50,7 +50,20 @@ function buscamarca2(objeto){
     return marca == objeto.marca
 }
 
+var soma = function(vet){
+    let novo = vet.map(soma32)
+    console.log(novo)
+}
+
+function soma32(objeto){
+    objeto.aro = objeto.aro + 3
+    return objeto
+}
+
 var vetor = []
 cadastra(vetor)
 cadastra(vetor)
 cadastra(vetor)
+busca(vetor)
+soma(vetor)
+buscamarca(vetor)
